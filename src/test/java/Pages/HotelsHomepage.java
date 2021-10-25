@@ -12,6 +12,10 @@ public class HotelsHomepage extends Web {
     WebElement passwordLocator= getDriver().findElement(By.xpath("//input[@id='sign-in-password']"));
     WebElement signInEmailPasswordLocator= getDriver().findElement(By.xpath("//button[@id='sign-in-button']"));
     WebElement signInErrorMsgLocator= getDriver().findElement(By.xpath("//div[@class='msg-error-icon msg-big mb-spider'] "));
+    WebElement signUpLinkLocator= getDriver().findElement(By.xpath("//a[contains(text(),'Sign up']"));
+    WebElement TermsConditionsLink= getDriver().findElement(By.xpath("//a[@id='sign-up-tc']"));
+    WebElement checkInCalendar= getDriver().findElement(By.xpath("//span[contains(text(),'Check in')]"));
+    WebElement guestLocator= getDriver().findElement(By.xpath("//span[contains(text(),'Guests')]"));
 
 
 
@@ -37,8 +41,12 @@ public class HotelsHomepage extends Web {
      return signInErrorMsgLocator.isDisplayed();
     }
 
-
-
+ public void clickSignUpLink(){
+     signUpLinkLocator.click();
+ }
+public void clickOnTermsAndConditions(){ TermsConditionsLink.click();}
+public void clickOnCheckInCalendar(){checkInCalendar.click();}
+public void clickOnGuests(){guestLocator.click();}
 
 
 }

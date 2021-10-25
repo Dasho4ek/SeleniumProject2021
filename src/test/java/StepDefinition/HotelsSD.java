@@ -8,15 +8,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-
-
 public class HotelsSD {
      Web web= new Web();
     HotelsHomepage hotels= new HotelsHomepage();
 
-
-     @Given("I open website")
-     public void launchWebpage(){
+    @Given("I launch webpage")
+    public void launchWebpage(){
           web.openWebpage();
      }
 
